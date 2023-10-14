@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ray_container:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "/app/run.py"]
+    volumes:
+      - .:/app
